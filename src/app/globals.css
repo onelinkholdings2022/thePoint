@@ -1,0 +1,149 @@
+/* ═══════════════════════════════════════════════════════
+   TAILWIND v4
+   ═══════════════════════════════════════════════════════ */
+@import "tailwindcss";
+
+/* ═══════════════════════════════════════════════════════
+   THEME — thay thế tailwind.config.ts (Tailwind v4)
+   Tất cả màu sắc, font, shadow lấy thẳng từ Figma
+   ═══════════════════════════════════════════════════════ */
+@theme {
+  /* ── Màu sắc ── */
+  --color-main:       #0c0e16;
+  --color-brand-red:  #bc0a00;
+  --color-brand-gold: #e3ac77;   /* Figma: color-4 */
+  --color-brand-glow: #e39d5a;   /* Figma: drop-shadow glow */
+  --color-brand-nav:  #eacea9;   /* Figma: navbar bottom border */
+  --color-brand-warm: #ffd677;   /* Figma: menu bg gradient start */
+
+  /* ── Font families ── */
+  --font-sans:        "Google Sans Flex", "DM Sans", "Inter", sans-serif;
+  --font-good-times:  "Good Times", "Audiowide", monospace;
+
+  /* ── Shadows (đúng giá trị Figma) ── */
+  --shadow-brand-image:      15px 0px 30px 0px rgba(188, 10, 0, 0.3);
+  --shadow-brand-image-left: -15px 0px 30px 0px rgba(188, 10, 0, 0.3);
+}
+
+/* ═══════════════════════════════════════════════════════
+   LOCAL FONTS
+   Đặt file vào /public/assets/fonts/
+   ═══════════════════════════════════════════════════════ */
+
+/* Good Times — heading/title */
+@font-face {
+  font-family: "Good Times";
+  src: url("/assets/fonts/GoodTimes.woff2") format("woff2"),
+    url("/assets/fonts/GoodTimes.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Google Sans Flex — Base style với variation axes đúng Figma */
+.google-sans-flex {
+  font-family: "Google Sans Flex", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "slnt" 0, "wdth" 100, "GRAD" 0, "ROND" 0;
+}
+
+/* ═══════════════════════════════════════════════════════
+   CSS VARIABLES — dùng trong custom classes bên dưới
+   ═══════════════════════════════════════════════════════ */
+:root {
+  --color-main:   #0c0e16;
+  --color-red:    #bc0a00;
+  --color-gold:   #e3ac77;
+  --color-glow:   #e39d5a;
+
+  /* Brand gradient — exact colour stops từ Figma radial */
+  --brand-gradient: radial-gradient(
+    ellipse at 50% 100%,
+    #bc0a00 0%,
+    #be1407 4.4%,
+    #c11e0f 8.8%,
+    #c6331e 17.7%,
+    #cb472d 26.5%,
+    #d05b3c 35.3%,
+    #d98459 53%,
+    #e3ac77 70.7%
+  );
+}
+
+/* ═══════════════════════════════════════════════════════
+   BASE
+   ═══════════════════════════════════════════════════════ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-main);
+  color: #ffffff;
+  font-family: "Google Sans Flex", "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-variation-settings: "slnt" 0, "wdth" 100, "GRAD" 0, "ROND" 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ═══════════════════════════════════════════════════════
+   UTILITY CLASSES
+   ═══════════════════════════════════════════════════════ */
+
+/* Nút / badge có gradient fill */
+.brand-gradient-bg {
+  background: var(--brand-gradient);
+}
+
+/* Text gradient (sub-heading đỏ → vàng) */
+.gradient-text {
+  background: var(--brand-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Viền gradient bọc quanh ảnh — cam trên → đỏ dưới
+   Dùng kỹ thuật CSS mask để tạo border transparent với gradient fill.
+   Đặt div này trực tiếp bên trong container group (không bị overflow-hidden chặn).
+   Kết hợp: opacity-0 group-hover:opacity-100 transition-opacity duration-300 */
+.brand-gradient-border {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  pointer-events: none;
+  border: 1.5px solid transparent;
+  background: linear-gradient(to bottom, #e3ac77 0%, #d05b3c 50%, #bc0a00 100%) border-box;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) padding-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask:
+    linear-gradient(#fff 0 0) padding-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+}
+
+/* Glow đỏ cho link Events trên navbar */
+.events-glow {
+  transition: filter 0.3s ease;
+}
+.events-glow:hover {
+  filter: drop-shadow(0 0 3px rgba(188, 10, 0, 1)) drop-shadow(0 0 8px rgba(188, 10, 0, 0.6));
+}
+
+/* ═══════════════════════════════════════════════════════
+   SCROLLBAR
+   ═══════════════════════════════════════════════════════ */
+::-webkit-scrollbar        { width: 6px; }
+::-webkit-scrollbar-track  { background: var(--color-main); }
+::-webkit-scrollbar-thumb  { background: var(--color-red); border-radius: 3px; }
