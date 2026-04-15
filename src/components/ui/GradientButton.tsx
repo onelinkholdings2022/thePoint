@@ -24,7 +24,7 @@ const GradientButton = forwardRef<HTMLButtonElement, GradientButtonProps>(
           whileHover={{ scale: 1.03 }}
           whileTap={{ scale: 0.97 }}
           className={cn(
-            "relative rounded-[5px] text-white font-sans font-normal",
+            "relative rounded-[5px] text-white font-sans font-normal items-center justify-center",
             "before:absolute before:inset-0 before:rounded-[5px] before:opacity-0 before:transition-opacity",
             "hover:before:opacity-100 before:brand-gradient-bg",
             "overflow-hidden transition-all duration-300",
@@ -58,7 +58,7 @@ const GradientButton = forwardRef<HTMLButtonElement, GradientButtonProps>(
         transition={{ duration: 0.3, ease: "easeOut" }}
         className={cn(
           "relative group rounded-[5px] text-white font-sans font-normal",
-          "bg-brand-gold",
+          "bg-brand-gold items-center justify-center",
           "overflow-hidden cursor-pointer",
           sizeClasses[size],
           className
