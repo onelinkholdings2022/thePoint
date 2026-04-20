@@ -17,7 +17,7 @@ export default function TreehouseSection() {
     >
       {/* RIGHT SIDEBAR — desktop only */}
       <div className="hidden lg:block absolute right-0 top-0 h-full w-116.75 pointer-events-none overflow-hidden">
-        <Image src="/assets/images/treehouse-sidebar.png" alt="" fill className="object-cover" aria-hidden />
+        <Image src="https://lh3.googleusercontent.com/d/1wHCIhIxp38F9dkwyTV_ZN_j3OTvGML9V" alt="" fill sizes="467px" className="object-cover" aria-hidden />
       </div>
 
       {/* MAIN CONTENT */}
@@ -65,7 +65,7 @@ export default function TreehouseSection() {
               animate={inView ? { scale: 1, opacity: 1 } : {}}
               transition={{ duration: 1.3, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
             >
-              <Image src="/assets/images/treehouse.png" alt="The Treehouse private venue" fill className="object-cover" />
+              <Image src="https://lh3.googleusercontent.com/d/15VlUYTcPxax3Swy6JuBlM9WJIwC3KvC8" alt="The Treehouse private venue" fill sizes="(max-width: 1023px) 100vw, 635px" className="object-cover" />
             </motion.div>
           </div>
         </div>

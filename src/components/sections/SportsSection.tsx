@@ -21,9 +21,10 @@ export default function SportsSection() {
        */}
       <div className="hidden lg:block absolute left-0 top-0 h-full w-116.75 pointer-events-none overflow-hidden">
         <Image
-          src="/assets/images/sports-sidebar.png"
+          src="https://lh3.googleusercontent.com/d/1AuqL6eYJoE6TZycvSGYQRyOYJduMDYGl"
           alt=""
           fill
+          sizes="467px"
           className="object-cover"
           aria-hidden
         />
@@ -56,9 +57,10 @@ export default function SportsSection() {
               transition={{ duration: 1.3, ease: [0.22, 1, 0.36, 1] }}
             >
               <Image
-                src="/assets/images/sports-bar.png"
+                src="https://lh3.googleusercontent.com/d/1D-nar18aL6xNyzLUn03Px6bAFW6W8ecG"
                 alt="Live sports at The Point"
                 fill
+                sizes="(max-width: 1023px) 100vw, 635px"
                 className="object-cover"
               />
             </motion.div>

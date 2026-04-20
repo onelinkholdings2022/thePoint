@@ -9,7 +9,7 @@ import Link from "next/link";
 const navLinks = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
-  { label: "Menu", href: "/menu" },
+  { label: "Menu", href: "https://order.toasttab.com/online/the-point-435-sw-152nd-st" },
   { label: "Events", href: "/events", gradient: true },
 ];
 
@@ -39,9 +39,10 @@ export default function Navbar() {
             <Link href="/" className="flex items-center shrink-0 z-50 relative">
               <div className="relative h-10 w-16 md:h-12 md:w-20 transition-all">
                 <Image
-                  src="/assets/images/logo.png"
+                  src="https://lh3.googleusercontent.com/d/1JcpkyQLY118mvySgemeDe28wxUL180dA"
                   alt="The Point Logo"
                   fill
+                  sizes="80px"
                   className="object-contain"
                   priority
                 />

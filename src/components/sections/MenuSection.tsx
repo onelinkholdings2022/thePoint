@@ -8,9 +8,9 @@ import GradientButton from "../ui/GradientButton";
 const AUTOPLAY_DELAY = 4000;
 
 const BASE_ITEMS = [
-  { src: "/assets/images/menu-cbd-mocktail.png", title: "Something Good", subtitle: "CBD & ZERO-PROOF" },
-  { src: "/assets/images/menu-point-burger.png", title: "The Point Burger", subtitle: "SHERRIED BACON JAM" },
-  { src: "/assets/images/menu-smoked-gouda.png", title: "Smoked Gouda Mac", subtitle: "ELEVATED CLASSICS" },
+  { src: "https://lh3.googleusercontent.com/d/1M1VjX9BJlAD9xeX8WucUjvNec4jHFnps", title: "Something Good", subtitle: "CBD & ZERO-PROOF" },
+  { src: "https://lh3.googleusercontent.com/d/1HvKeyD75tds4uRozMqP0P7fHHk7SvSnm", title: "The Point Burger", subtitle: "SHERRIED BACON JAM" },
+  { src: "https://lh3.googleusercontent.com/d/1-jzbvWUn5JvHhu_WUGjFJ11D18-fxTH2", title: "Smoked Gouda Mac", subtitle: "ELEVATED CLASSICS" },
 ];
 
 const menuItems = [...BASE_ITEMS, ...BASE_ITEMS];
@@ -92,7 +92,7 @@ export default function MenuSection() {
     >
       {/* Layer 1: background image */}
       <div className="absolute inset-0">
-        <Image src="/assets/images/menu-bg.png" alt="" fill className="object-cover" aria-hidden />
+        <Image src="https://lh3.googleusercontent.com/d/1vVl--3P-vHOROCYukyJ_PRZWHkLgyVdt" alt="" fill sizes="100vw" className="object-cover" aria-hidden />
       </div>
       {/* Layer 2: dark tint */}
       <div className="absolute inset-0" style={{ background: "rgba(12,14,22,0.20)" }} />
@@ -119,7 +119,7 @@ export default function MenuSection() {
             aria-label="Previous"
           >
             <div className="relative w-8 h-6 sm:w-12.25 sm:h-9">
-              <Image src="/assets/images/arrow-left.png" alt="Previous" fill className="object-contain" />
+              <Image src="https://lh3.googleusercontent.com/d/1cAFD67WiqjEJLnxeojEvWXfeH5LbN52F" alt="Previous" fill className="object-contain" />
             </div>
           </button>
 
@@ -161,7 +161,7 @@ export default function MenuSection() {
                         animate={inView ? { scale: 1, opacity: 1 } : {}}
                         transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: (i % VISIBLE) * 0.2 }}
                       >
-                        <Image src={item.src} alt={item.title} fill className="object-cover" draggable={false} />
+                        <Image src={item.src} alt={item.title} fill sizes="(max-width: 599px) 100vw, (max-width: 959px) 50vw, 33vw" className="object-cover" draggable={false} />
                       </motion.div>
                     </div>
                   </div>
@@ -184,7 +184,7 @@ export default function MenuSection() {
             aria-label="Next"
           >
             <div className="relative w-8 h-6 sm:w-12.25 sm:h-9">
-              <Image src="/assets/images/arrow-right.png" alt="Next" fill className="object-contain" />
+              <Image src="https://lh3.googleusercontent.com/d/1pfM0cNRhGgxoi5UH9O_vQ7p4BQqqI-uL" alt="Next" fill className="object-contain" />
             </div>
           </button>
         </div>

@@ -23,9 +23,10 @@ export default function Footer() {
           <div className="flex flex-col items-center shrink-0 w-full lg:w-93">
             <div className="relative w-35 h-21.25 sm:w-40 sm:h-24.5 lg:w-47.25 lg:h-28.75">
               <Image
-                src="/assets/images/logo.png"
+                src="https://lh3.googleusercontent.com/d/1JcpkyQLY118mvySgemeDe28wxUL180dA"
                 alt="The Point Logo"
                 fill
+                sizes="190px"
                 className="object-contain"
               />
             </div>
@@ -129,10 +130,10 @@ export default function Footer() {
             {/* THAY ĐỔI TẠI ĐÂY: Dùng flex-row thay cho flex-col để Privacy và Terms LUÔN nằm ngang trên Mobile.
                 Dùng gap-6 để cách nhau 24px trên Mobile, và lg:gap-[260px] trên Desktop */}
             <div className="flex flex-row items-center justify-center gap-6 lg:gap-65 w-full lg:w-auto">
-              <Link href="#" className="google-sans-flex text-white hover:text-brand-gold transition-colors whitespace-nowrap text-[14px] sm:text-[15px] lg:text-[18px] leading-6">
+              <Link href="/privacy" className="google-sans-flex text-white hover:text-brand-gold transition-colors whitespace-nowrap text-[14px] sm:text-[15px] lg:text-[18px] leading-6">
                 Privacy Policy
               </Link>
-              <Link href="#" className="google-sans-flex text-white hover:text-brand-gold transition-colors whitespace-nowrap text-[14px] sm:text-[15px] lg:text-[18px] leading-6">
+              <Link href="/terms" className="google-sans-flex text-white hover:text-brand-gold transition-colors whitespace-nowrap text-[14px] sm:text-[15px] lg:text-[18px] leading-6">
                 Terms of Service
               </Link>
             </div>

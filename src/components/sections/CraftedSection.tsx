@@ -5,9 +5,9 @@ import Image from "next/image";
 import { useRef, useState, useEffect } from "react";
 
 const slides = [
-  { src: "/assets/images/food-main.png", alt: "Signature comfort dish" },
-  { src: "/assets/images/food-main-2.png", alt: "Premium ingredients" },
-  { src: "/assets/images/food-main-3.png", alt: "Craft cocktails" },
+  { src: "https://lh3.googleusercontent.com/d/1IsQ_hYDlbAW59WF1bOXCFvPP-XM-SioX", alt: "Signature comfort dish" },
+  { src: "https://lh3.googleusercontent.com/d/1TVyJQqLMlkcreZZF_5MHy15pBA8HDdR4", alt: "Premium ingredients" },
+  { src: "https://lh3.googleusercontent.com/d/1lYsYKBQc8B5Quau2nPfhNPuW-Xd4lk7f", alt: "Craft cocktails" },
 ];
 
 const EASE: [number, number, number, number] = [0.65, 0, 0.35, 1];
@@ -59,7 +59,7 @@ function SlideItem({
         animate={{ x: imageAnimateX }}
         transition={{ duration: DURATION, ease: EASE }}
       >
-        <Image src={src} alt={alt} fill className="object-cover" draggable={false} />
+        <Image src={src} alt={alt} fill sizes="(max-width: 1023px) 100vw, 840px" className="object-cover" draggable={false} />
       </motion.div>
     </motion.div>
   );

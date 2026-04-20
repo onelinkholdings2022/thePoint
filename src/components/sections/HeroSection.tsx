@@ -18,9 +18,10 @@ export default function HeroSection() {
     <section className="relative w-full h-screen min-h-200 overflow-hidden">
       {/* Background image */}
       <Image
-        src="/assets/images/hero-bg.png"
+        src="https://lh3.googleusercontent.com/d/1nVnGHNtjsN32vuyE6lZwaCYeErqLMK8f"
         alt="The Point Bar atmosphere"
         fill
+        sizes="100vw"
         className="object-cover"
         priority
       />
