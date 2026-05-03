@@ -1,5 +1,5 @@
 import { Resend } from "resend";
-import { BookingPayload } from "@/bus/booking/booking.types";
+import { BookingPayload } from "@/bus/booking/Booking.types";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 

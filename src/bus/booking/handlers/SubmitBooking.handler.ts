@@ -1,6 +1,6 @@
-import { ICommandHandler } from "@/bus/base/command-handler.interface";
-import { SubmitBookingCommand } from "../commands/submit-booking.command";
-import { BookingBusOutput } from "../booking.types";
+import { ICommandHandler } from "@/bus/base/CommandHandler.interface";
+import { SubmitBookingCommand } from "../commands/SubmitBooking.command";
+import { BookingBusOutput } from "../Booking.types";
 import { BookingRepository } from "@/repositories/booking/booking.repository";
 
 export class SubmitBookingHandler

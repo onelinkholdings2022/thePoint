@@ -1,5 +1,5 @@
-﻿import { IQuery } from "@/bus/base/query.interface";
-import { EventsBusOutput } from "../events.types";
+﻿import { IQuery } from "@/bus/base/Query.interface";
+import { EventsBusOutput } from "../Events.types";
 
 export class GetAllEventsQuery implements IQuery<EventsBusOutput> {
   readonly _resultType?: EventsBusOutput;

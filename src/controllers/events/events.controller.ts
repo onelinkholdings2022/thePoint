@@ -1,13 +1,13 @@
 ﻿import { BaseController } from "../base/base.controller";
-import { QueryBus } from "@/bus/base/query.bus";
-import { CommandBus } from "@/bus/base/command.bus";
-import { EventBus } from "@/bus/base/event.bus";
-import { GetAllEventsQuery } from "@/bus/events/queries/get-all-events.query";
-import { GetEventsBySheetQuery } from "@/bus/events/queries/get-events-by-sheet.query";
-import { GetAllEventsHandler } from "@/bus/events/handlers/get-all-events.handler";
-import { GetEventsBySheetHandler } from "@/bus/events/handlers/get-events-by-sheet.handler";
-import { EventsFetchedEvent } from "@/bus/events/domain/events-fetched.event";
-import { EventsBusOutput } from "@/bus/events/events.types";
+import { QueryBus } from "@/bus/base/Query.bus";
+import { CommandBus } from "@/bus/base/Command.bus";
+import { EventBus } from "@/bus/base/Event.bus";
+import { GetAllEventsQuery } from "@/bus/events/queries/GetAllEvents.query";
+import { GetEventsBySheetQuery } from "@/bus/events/queries/GetEventsBySheet.query";
+import { GetAllEventsHandler } from "@/bus/events/handlers/GetAllEvents.handler";
+import { GetEventsBySheetHandler } from "@/bus/events/handlers/GetEventsBySheet.handler";
+import { EventsFetchedEvent } from "@/bus/events/domain/EventsFetched.event";
+import { EventsBusOutput } from "@/bus/events/Events.types";
 import { SheetName } from "@/lib/sheetConstants";
 
 export class EventController extends BaseController {

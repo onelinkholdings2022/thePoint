@@ -1,5 +1,5 @@
-import { IEventHandler } from "@/bus/base/event-handler.interface";
-import { BookingSubmittedEvent } from "@/bus/booking/domain/booking-submitted.event";
+import { IEventHandler } from "@/bus/base/EventHandler.interface";
+import { BookingSubmittedEvent } from "@/bus/booking/domain/BookingSubmitted.event";
 import { EmailService } from "@/services/email/email.service";
 
 export class SendConfirmationEmailHandler

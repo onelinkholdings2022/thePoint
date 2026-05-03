@@ -1,10 +1,10 @@
-import { CommandBus } from "@/bus/base/command.bus";
-import { EventBus } from "@/bus/base/event.bus";
-import { SubmitBookingCommand } from "@/bus/booking/commands/submit-booking.command";
-import { BookingSubmittedEvent } from "@/bus/booking/domain/booking-submitted.event";
-import { SubmitBookingHandler } from "@/bus/booking/handlers/submit-booking.handler";
-import { SendConfirmationEmailHandler } from "@/bus/booking/handlers/send-confirmation-email.handler";
-import { BookingBusOutput, BookingPayload } from "@/bus/booking/booking.types";
+import { CommandBus } from "@/bus/base/Command.bus";
+import { EventBus } from "@/bus/base/Event.bus";
+import { SubmitBookingCommand } from "@/bus/booking/commands/SubmitBooking.command";
+import { BookingSubmittedEvent } from "@/bus/booking/domain/BookingSubmitted.event";
+import { SubmitBookingHandler } from "@/bus/booking/handlers/SubmitBooking.handler";
+import { SendConfirmationEmailHandler } from "@/bus/booking/handlers/SendConfirmationEmail.handler";
+import { BookingBusOutput, BookingPayload } from "@/bus/booking/Booking.types";
 import { EmailService } from "@/services/email/email.service";
 
 export class BookingController {

@@ -1,5 +1,5 @@
 import { getSheetsClient, SPREADSHEET_ID } from "@/lib/googleSheets";
-import { BookingPayload } from "@/bus/booking/booking.types";
+import { BookingPayload } from "@/bus/booking/Booking.types";
 
 const FORM_DATA_SHEET = "FormData";
 

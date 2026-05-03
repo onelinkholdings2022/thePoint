@@ -1,5 +1,5 @@
-﻿import { IDomainEvent } from "./domain-event.interface";
-import { IEventHandler } from "./event-handler.interface";
+﻿import { IDomainEvent } from "./DomainEvent.interface";
+import { IEventHandler } from "./EventHandler.interface";
 
 export class EventBus<TEvent extends IDomainEvent = IDomainEvent> {
   private readonly handlers: Array<IEventHandler<TEvent>> = [];

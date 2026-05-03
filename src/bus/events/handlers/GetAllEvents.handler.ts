@@ -1,6 +1,6 @@
-﻿import { IQueryHandler } from "@/bus/base/query-handler.interface";
-import { GetAllEventsQuery } from "../queries/get-all-events.query";
-import { EventsBusOutput } from "../events.types";
+﻿import { IQueryHandler } from "@/bus/base/QueryHandler.interface";
+import { GetAllEventsQuery } from "../queries/GetAllEvents.query";
+import { EventsBusOutput } from "../Events.types";
 import { EventService } from "@/services/events/events.service";
 import { SHEET_NAMES } from "@/lib/sheetConstants";
 

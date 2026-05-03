@@ -1,5 +1,5 @@
-﻿import { ICommand } from "./command.interface";
-import { ICommandHandler } from "./command-handler.interface";
+﻿import { ICommand } from "./Command.interface";
+import { ICommandHandler } from "./CommandHandler.interface";
 
 export class CommandBus {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any

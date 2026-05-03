@@ -11,9 +11,9 @@ import {
   FormState,
   formatCalendarDate,
 } from "@/components/sections/events/booking/bookingConstants";
-import BookingHero from "./_components/BookingHero";
-import BookingFormCard from "./_components/BookingFormCard";
-import BookingInfo from "./_components/BookingInfo";
+import BookingHero from "./components/BookingHero";
+import BookingFormCard from "./components/BookingFormCard";
+import BookingInfo from "./components/BookingInfo";
 import http from "@/lib/http";
 
 const BG_URL =

@@ -1,6 +1,6 @@
 import { NextRequest } from "next/server";
 import { BookingController } from "@/controllers/booking/booking.controller";
-import { BookingPayload } from "@/bus/booking/booking.types";
+import { BookingPayload } from "@/bus/booking/Booking.types";
 
 export const dynamic = "force-dynamic";
 

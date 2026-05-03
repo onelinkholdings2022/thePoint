@@ -1,4 +1,4 @@
-﻿import { IDomainEvent } from "@/bus/base/domain-event.interface";
+﻿import { IDomainEvent } from "@/bus/base/DomainEvent.interface";
 import { EventItem } from "@/repositories/events/events.repository";
 
 export class EventsFetchedEvent implements IDomainEvent {

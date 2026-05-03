@@ -1,5 +1,5 @@
-﻿import { IQuery } from "./query.interface";
-import { IQueryHandler } from "./query-handler.interface";
+﻿import { IQuery } from "./Query.interface";
+import { IQueryHandler } from "./QueryHandler.interface";
 
 export class QueryBus {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
