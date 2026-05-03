@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import GradientButton from "../ui/GradientButton";
 
@@ -14,6 +15,7 @@ const fadeUp = {
 };
 
 export default function HeroSection() {
+  const router = useRouter();
   return (
     <section className="relative w-full h-screen min-h-200 overflow-hidden">
       {/* Background image */}
@@ -57,7 +59,7 @@ export default function HeroSection() {
             animate="visible"
             custom={0.5}
           >
-            <GradientButton size="md" className="w-46.75">
+            <GradientButton onClick={() => router.push("/events")} size="md" className="w-46.75">
               Reserve a Table
             </GradientButton>
           </motion.div>

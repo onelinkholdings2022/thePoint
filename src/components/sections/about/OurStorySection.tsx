@@ -1,12 +1,14 @@
 "use client";
 
 import { motion, useInView } from "framer-motion";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { useRef } from "react";
 import GradientButton from "@/components/ui/GradientButton";
 import { IMG, d, EASE } from "./images";
 
 export default function OurStorySection() {
+  const router = useRouter();
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, amount: 0.1 });
 
@@ -137,7 +139,7 @@ export default function OurStorySection() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7, delay: 0.2, ease: EASE }}
         >
-          <GradientButton size="md" className="w-44">
+          <GradientButton onClick={() => router.push("/events")} size="md" className="w-44">
             Contact Us
           </GradientButton>
         </motion.div>

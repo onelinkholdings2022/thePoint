@@ -1,5 +1,15 @@
 import type { Metadata } from "next";
+import { Host_Grotesk } from "next/font/google";
 import "./globals.css";
+
+// next/font self-hosts the font — no external request at page load, no render block
+const hostGrotesk = Host_Grotesk({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800"],
+  style: ["normal", "italic"],
+  variable: "--font-host-grotesk",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "The Point Burien | Upscale Sports Bar & Events",
@@ -14,6 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Google Sans Flex is only available via Google Fonts CDN — load async with display=swap */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
@@ -21,7 +32,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body>{children}</body>
+      <body className={hostGrotesk.variable}>{children}</body>
     </html>
   );
 }

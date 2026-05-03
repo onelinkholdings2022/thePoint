@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import GradientButton from "./ui/GradientButton";
 import Image from "next/image";
@@ -9,7 +10,7 @@ import Link from "next/link";
 const navLinks = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
-  { label: "Menu", href: "https://order.toasttab.com/online/the-point-435-sw-152nd-st" },
+  { label: "Menu", href: "https://order.toasttab.com/online/the-point-435-sw-152nd-st", external: true },
   { label: "Events", href: "/events", gradient: true },
 ];
 
@@ -20,6 +21,7 @@ export default function Navbar() {
     [0, 80],
     ["0px 8px 30px 0px rgba(188, 10, 0, 0)", "0px 8px 30px 0px rgba(188, 10, 0, 0.45)"]
   );
+  const router = useRouter();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
@@ -52,7 +54,7 @@ export default function Navbar() {
             {/* Nav Links - Desktop */}
             <div className="hidden md:flex items-center gap-6 lg:gap-10 xl:gap-12.75">
               {navLinks.map((link) => (
-                <Link key={link.label} href={link.href} className="relative group">
+                <Link key={link.label} href={link.href} {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})} className="relative group">
                   {link.gradient ? (
                     <span className="google-sans-flex text-[16px] xl:text-[18px] font-semibold text-brand-glow events-glow">
                       {link.label}
@@ -74,7 +76,7 @@ export default function Navbar() {
           <div className="flex items-center gap-4 shrink-0 z-50">
             {/* Nút Book Now - Desktop/Tablet */}
             <div className="hidden sm:block">
-              <GradientButton size="md" className="w-28 xl:w-33.75 google-sans-flex text-sm xl:text-base">
+              <GradientButton onClick={() => router.push("/events")} size="md" className="w-28 xl:w-33.75 google-sans-flex text-sm xl:text-base">
                 Book Now
               </GradientButton>
             </div>
@@ -129,6 +131,7 @@ export default function Navbar() {
                   <Link
                     key={link.label}
                     href={link.href}
+                    {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="group relative w-full"
                   >
@@ -146,7 +149,7 @@ export default function Navbar() {
                 
                 {/* Nút Book Now */}
                 <div className="sm:hidden mt-2 w-full">
-                   <GradientButton size="md" className="w-full google-sans-flex py-3 text-base">
+                  <GradientButton onClick={() => { router.push("/events"); setIsMobileMenuOpen(false); }} size="md" className="w-full google-sans-flex py-3 text-base">
                     Book Now
                   </GradientButton>
                 </div>

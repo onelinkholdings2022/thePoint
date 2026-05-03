@@ -17,8 +17,9 @@
   --color-brand-warm: #ffd677;   /* Figma: menu bg gradient start */
 
   /* ── Font families ── */
-  --font-sans:        "Google Sans Flex", "DM Sans", "Inter", sans-serif;
-  --font-good-times:  "Good Times", "Audiowide", monospace;
+  --font-sans:         "Google Sans Flex", "DM Sans", "Inter", sans-serif;
+  --font-good-times:   "Good Times", "Audiowide", monospace;
+  --font-host-grotesk: "Host Grotesk", sans-serif;
 
   /* ── Shadows (đúng giá trị Figma) ── */
   --shadow-brand-image:      15px 0px 30px 0px rgba(188, 10, 0, 0.3);
@@ -49,6 +50,14 @@
   font-variation-settings: "slnt" 0, "wdth" 100, "GRAD" 0, "ROND" 0;
 }
 
+/* Host Grotesk */
+.host-grotesk {
+  font-family: "Host Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
 /* ═══════════════════════════════════════════════════════
    CSS VARIABLES — dùng trong custom classes bên dưới
    ═══════════════════════════════════════════════════════ */
@@ -57,6 +66,10 @@
   --color-red:    #bc0a00;
   --color-gold:   #e3ac77;
   --color-glow:   #e39d5a;
+
+  /* Font family variables — referenced via var() in inline styles throughout components */
+  --font-google-sans-flex: "Google Sans Flex", "DM Sans", sans-serif;
+  --font-good-times:       "Good Times", "Audiowide", monospace;
 
   /* Brand gradient — exact colour stops từ Figma radial */
   --brand-gradient: radial-gradient(
@@ -147,3 +160,4 @@ body {
 ::-webkit-scrollbar        { width: 6px; }
 ::-webkit-scrollbar-track  { background: var(--color-main); }
 ::-webkit-scrollbar-thumb  { background: var(--color-red); border-radius: 3px; }
+

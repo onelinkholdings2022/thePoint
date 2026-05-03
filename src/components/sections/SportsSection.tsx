@@ -1,13 +1,22 @@
 "use client";
 
 import { motion, useInView } from "framer-motion";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { useRef } from "react";
 import GradientButton from "../ui/GradientButton";
+import { useEventsStore } from "@/stores/eventsStore";
+import { SHEET_NAMES } from "@/lib/sheetConstants";
 
 export default function SportsSection() {
+  const router = useRouter();
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-10%" });
+
+  const goToLiveEvents = () => {
+    useEventsStore.getState().setFilter(SHEET_NAMES.LIVE_ENTERTAINMENT);
+    router.push("/events");
+  };
 
   return (
     <section
@@ -92,14 +101,14 @@ export default function SportsSection() {
             join us for live entertainment and themed game nights.
           </p>
 
-          <GradientButton size="md" className="w-[80%] sm:w-[80%] lg:w-57.5 mt-2 lg:mt-0 hidden lg:flex">
+          <GradientButton onClick={goToLiveEvents} size="md" className="w-[80%] sm:w-[80%] lg:w-57.5 mt-2 lg:mt-0 hidden lg:flex">
             View Events Calendar
           </GradientButton>
         </motion.div>
 
         {/* Button mobile-only: nằm dưới ảnh, trên desktop ẩn đi vì button đã có trong text */}
         <div className="order-3 lg:hidden w-full flex justify-center">
-          <GradientButton size="md" className="w-[80%] sm:w-[80%]">
+          <GradientButton onClick={goToLiveEvents} size="md" className="w-[80%] sm:w-[80%]">
             View Events Calendar
           </GradientButton>
         </div>

@@ -196,7 +196,11 @@ export default function MenuSection() {
           transition={{ duration: 0.7, delay: 0.45 }}
           className="flex justify-center"
         >
-          <GradientButton size="md" className="w-49.25 whitespace-nowrap">
+          <GradientButton
+            onClick={() => window.open("https://order.toasttab.com/online/the-point-435-sw-152nd-st", "_blank", "noopener,noreferrer")}
+            size="md"
+            className="w-49.25 whitespace-nowrap"
+          >
             View Menu &amp; Order
           </GradientButton>
         </motion.div>

@@ -1,13 +1,22 @@
 "use client";
 
 import { motion, useInView } from "framer-motion";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { useRef } from "react";
 import GradientButton from "../ui/GradientButton";
+import { useEventsStore } from "@/stores/eventsStore";
+import { SHEET_NAMES } from "@/lib/sheetConstants";
 
 export default function TreehouseSection() {
+  const router = useRouter();
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, amount: 0.2 });
+
+  const goToTreehouse = () => {
+    useEventsStore.getState().setFilter(SHEET_NAMES.TREEHOUSE);
+    router.push("/events");
+  };
 
   return (
     <section
@@ -44,7 +53,7 @@ export default function TreehouseSection() {
             or birthday? The Treehouse is our dedicated premium private party
             and group booking venue.
           </p>
-          <GradientButton size="md" className="w-full max-w-70.75 hidden lg:flex">
+          <GradientButton onClick={goToTreehouse} size="md" className="w-full max-w-70.75 hidden lg:flex">
             Inquire About The Treehouse
           </GradientButton>
         </motion.div>
@@ -72,7 +81,7 @@ export default function TreehouseSection() {
 
         {/* Button mobile-only: nằm dưới ảnh, trên desktop ẩn đi vì button đã có trong text */}
         <div className="order-3 lg:hidden w-full flex justify-center">
-          <GradientButton size="md" className="w-full max-w-70.75">
+          <GradientButton onClick={goToTreehouse} size="md" className="w-full max-w-70.75">
             Inquire About The Treehouse
           </GradientButton>
         </div>

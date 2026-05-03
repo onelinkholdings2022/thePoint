@@ -25,12 +25,25 @@ export default function EventsSection() {
           >
             <Image src={d(IMG.events)} alt="Events at The Point" fill sizes="50vw" className="object-cover" />
           </motion.div>
+          {/* Mobile: full-cover tint */}
+          <div
+            className="absolute inset-0 z-10 pointer-events-none sm:hidden"
+            style={{ background: "rgba(12,14,22,0.5)" }}
+            aria-hidden="true"
+          />
+          {/* Desktop: directional gradient — left opaque → right transparent */}
+          <div
+            className="absolute inset-0 z-10 pointer-events-none hidden sm:block"
+            style={{ background: "linear-gradient(to right, #0c0e16 0%, transparent 60%)" }}
+            aria-hidden="true"
+          />
+
           {/* Heading overlay */}
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.3, ease: EASE }}
-            className="absolute inset-0 flex flex-col justify-center items-center lg:items-start"
+            className="absolute inset-0 z-20 flex flex-col justify-center items-center lg:items-start"
             style={{ paddingInline: "clamp(20px, 8vw, 100px)", paddingBlock: "clamp(24px, 4vw, 64px)" }}
           >
             <h2 className="font-good-times text-[clamp(16px,2.2vw,27px)] text-white tracking-wider leading-tight text-center lg:text-left">

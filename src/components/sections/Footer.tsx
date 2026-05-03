@@ -58,9 +58,19 @@ export default function Footer() {
               </p>
               {/* BIỆN PHÁP MẠNH: Dùng gap-2.5 (10px) cho Mobile để khít lại, lg:gap-5 (20px) giữ nguyên cho Desktop */}
               <nav className="flex flex-col items-center lg:items-start gap-2.5 lg:gap-5">
-                {["Home", "About Us", "Menu (Toast Order)", "Events Hub"].map((item) => (
-                  <Link key={item} href="#" className="google-sans-flex text-white hover:text-brand-gold transition-colors duration-200 text-[15px] lg:text-[18px] leading-6">
-                    {item}
+                {[
+                  { label: "Home", href: "/" },
+                  { label: "About Us", href: "/about" },
+                  { label: "Menu (Toast Order)", href: "https://order.toasttab.com/online/the-point-435-sw-152nd-st", external: true },
+                  { label: "Events Hub", href: "/events" },
+                ].map((item) => (
+                  <Link
+                    key={item.label}
+                    href={item.href}
+                    {...(item.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                    className="google-sans-flex text-white hover:text-brand-gold transition-colors duration-200 text-[15px] lg:text-[18px] leading-6"
+                  >
+                    {item.label}
                   </Link>
                 ))}
               </nav>
@@ -73,9 +83,13 @@ export default function Footer() {
               </p>
               {/* Thay style inline bằng gap-2.5 lg:gap-5 */}
               <nav className="flex flex-col items-center lg:items-start gap-2.5 lg:gap-5">
-                {["The Treehouse", "Book a Party", "General Contact"].map((item) => (
-                  <Link key={item} href="#" className="google-sans-flex text-white hover:text-brand-gold transition-colors duration-200 text-[15px] lg:text-[18px] leading-6">
-                    {item}
+                {[
+                  { label: "The Treehouse", href: "/book-the-treehouse" },
+                  { label: "Book a Party", href: "/book-the-treehouse" },
+                  { label: "General Contact", href: "#" },
+                ].map((item) => (
+                  <Link key={item.label} href={item.href} className="google-sans-flex text-white hover:text-brand-gold transition-colors duration-200 text-[15px] lg:text-[18px] leading-6">
+                    {item.label}
                   </Link>
                 ))}
               </nav>
