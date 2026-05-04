@@ -17,12 +17,6 @@ interface FilterOption {
 
 const OPTIONS: FilterOption[] = [
   {
-    id: "all",
-    label: "All Events",
-    imgUrl: normalizeImageUrl(EVENTS_IMG.allEvents),
-    fallback: "from-brand-red/60 to-brand-gold/40",
-  },
-  {
     id: SHEET_NAMES.LIVE_ENTERTAINMENT,
     label: "Live Entertainment & Sports",
     imgUrl: normalizeImageUrl(EVENTS_IMG.liveEntertainment),
@@ -52,7 +46,7 @@ export default function EventsFilter() {
         backgroundColor: "#0c0e16" 
       }}
     >
-      <div className="w-full grid grid-cols-1 sm:grid-cols-3 gap-0 border-b border-white/10">
+      <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-0 border-b border-white/10">
         {OPTIONS.map((opt) => {
           const isActive = activeFilter === opt.id;
 
@@ -119,7 +113,7 @@ export default function EventsFilter() {
                 <p 
                   className="relative z-10 font-good-times text-center uppercase tracking-widest text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]"
                   // Cắm chốt cỡ chữ luôn
-                  style={{ fontSize: "clamp(17px, 2.5vw, 25px)" }}
+                  style={{ fontSize: "clamp(17px, 2.5vw, 30px)" }}
                 >
                   {opt.label}
                 </p>

@@ -11,12 +11,12 @@ const BASE_REVIEWS = [
     text: "Finally, a place in Burien to watch the game without feeling like I'm in a frat house. The Smoked Gouda Mac is incredible and the upscale vibe is exactly what we needed.",
   },
   {
-    avatar: "https://lh3.googleusercontent.com/d/1N5HJnxllqEtoe6qagSUl67dGMwckWVdw",
+    avatar: "https://lh3.googleusercontent.com/d/1GqfyisHWgXincxqUn7xKBGv6-taGxfnd",
     name: "Sarah Mitchell",
     text: "We booked The Treehouse for a 40th birthday. The staff handled everything perfectly, and the signature CBD mocktails were a massive hit with our group!",
   },
   {
-    avatar: "https://lh3.googleusercontent.com/d/1o5RSTOkRBjxl3dSjWNLC2GALGg_p1ws5",
+    avatar: "https://lh3.googleusercontent.com/d/1Lyptti7SuHl8yrCJy_vUG5e4wFdopIgb",
     name: "Marcus Johnson",
     text: "Great energy, premium drinks, and the Sherried Bacon Jam burger is hands down the best I've had in years. This is my new go-to weekend spot.",
   },

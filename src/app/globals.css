@@ -146,13 +146,6 @@ body {
   mask-composite: exclude;
 }
 
-/* Glow đỏ cho link Events trên navbar */
-.events-glow {
-  transition: filter 0.3s ease;
-}
-.events-glow:hover {
-  filter: drop-shadow(0 0 3px rgba(188, 10, 0, 1)) drop-shadow(0 0 8px rgba(188, 10, 0, 0.6));
-}
 
 /* ═══════════════════════════════════════════════════════
    SCROLLBAR

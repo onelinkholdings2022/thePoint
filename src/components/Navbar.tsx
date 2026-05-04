@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import GradientButton from "./ui/GradientButton";
@@ -23,6 +23,15 @@ export default function Navbar() {
   );
   const router = useRouter();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [eventsGlowPos, setEventsGlowPos] = useState<{ x: number; y: number } | null>(null);
+  const eventsRef = useRef<HTMLSpanElement>(null);
+
+  const handleEventsMouseMove = (e: React.MouseEvent<HTMLSpanElement>) => {
+    const el = eventsRef.current;
+    if (!el) return;
+    const rect = el.getBoundingClientRect();
+    setEventsGlowPos({ x: e.clientX - rect.left, y: e.clientY - rect.top });
+  };
 
   return (
     <>
@@ -56,7 +65,21 @@ export default function Navbar() {
               {navLinks.map((link) => (
                 <Link key={link.label} href={link.href} {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})} className="relative group">
                   {link.gradient ? (
-                    <span className="google-sans-flex text-[16px] xl:text-[18px] font-semibold text-brand-glow events-glow">
+                    <span
+                      ref={eventsRef}
+                      onMouseMove={handleEventsMouseMove}
+                      onMouseLeave={() => setEventsGlowPos(null)}
+                      // 1. Dùng bg-clip-text và text-transparent của Tailwind
+                      className="google-sans-flex text-[16px] xl:text-[18px] font-semibold bg-clip-text text-transparent"
+                      style={{
+                        display: "inline-block",
+                        // 2. Tách riêng Color và Image để không đè mất thuộc tính clip
+                        backgroundColor: "#e39d5a",
+                        backgroundImage: eventsGlowPos
+                          ? `radial-gradient(circle 60px at ${eventsGlowPos.x}px ${eventsGlowPos.y}px, rgba(188,10,0,0.85) 0%, rgba(188,10,0,0.3) 40%, transparent 70%)`
+                          : "none",
+                      }}
+                    >
                       {link.label}
                     </span>
                   ) : (
