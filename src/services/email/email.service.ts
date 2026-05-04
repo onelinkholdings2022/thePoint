@@ -27,9 +27,9 @@ function buildConfirmationHtml(p: BookingPayload): string {
       <img
         src="https://lh3.googleusercontent.com/d/1JcpkyQLY118mvySgemeDe28wxUL180dA"
         alt="The Point"
-        style="height:48px;margin-bottom:24px;"
+        style="height:48px;margin-bottom:24px;display:block;margin-left:auto;margin-right:auto;"
       />
-      <h1 style="font-size:28px;margin:0 0 8px;letter-spacing:2px;text-transform:uppercase;">Booking Confirmed!</h1>
+      <h1 style="font-size:28px;margin:0 0 8px;letter-spacing:2px;text-transform:uppercase;text-align:center;">Booking Confirmed!</h1>
       <p style="color:rgba(255,255,255,0.7);margin:0 0 24px;">
         Hi ${p.name}, your reservation at The Point has been received. Here are your details:
       </p>
@@ -56,7 +56,7 @@ function buildConfirmationHtml(p: BookingPayload): string {
         </tr>
         ${noteRow}
       </table>
-      <p style="color:rgba(255,255,255,0.5);font-size:13px;margin:0;">
+      <p style="color:rgba(255,255,255,0.5);font-size:13px;margin:0;text-align:center;">
         If you need to make any changes, please contact us directly.<br/>
         Please check your spam folder if you don't see this email within a few minutes.
       </p>
