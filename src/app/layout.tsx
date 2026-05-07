@@ -16,6 +16,12 @@ export const metadata: Metadata = {
   description:
     "Burien's premier 21+ upscale sports bar and events destination. Premium craft drinks, elevated dining, live sports, and private event venue — The Treehouse.",
   keywords: "sports bar, Burien, upscale, craft cocktails, private events, SeaTac",
+  icons: {
+    icon: [
+      { url: "/icon-light.png", media: "(prefers-color-scheme: dark)" },
+      { url: "/icon-dark.png", media: "(prefers-color-scheme: light)" },
+    ],
+  },
 };
 
 export default function RootLayout({

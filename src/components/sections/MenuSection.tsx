@@ -8,11 +8,10 @@ import GradientButton from "../ui/GradientButton";
 const AUTOPLAY_DELAY = 4000;
 
 const BASE_ITEMS = [
-  { src: "https://lh3.googleusercontent.com/d/1M1VjX9BJlAD9xeX8WucUjvNec4jHFnps", title: "Something Good", subtitle: "CBD & ZERO-PROOF" },
-  { src: "https://lh3.googleusercontent.com/d/1Zw0XkO32IaCtFY12h54U-AODhebiE3Sp", title: "The Point Burger", subtitle: "SHERRIED BACON JAM" },
-  { src: "https://lh3.googleusercontent.com/d/1D5dCzXU-B8y8o2VOOP5wP1PC6Jblgqcs", title: "Smoked Gouda Mac", subtitle: "ELEVATED CLASSICS" },
+  { src: "https://lh3.googleusercontent.com/d/1ExAVLoLKh3ZjekcF6G2tB-yJOnYcHWBG", title: "Something Good", subtitle: "CBD & ZERO-PROOF" },
+  { src: "https://lh3.googleusercontent.com/d/12DU6KtyU3UHecB-EBxkpaG1Tn2i4Wjhp", title: "The Point Burger", subtitle: "SHERRIED BACON JAM" },
+  { src: "https://lh3.googleusercontent.com/d/1yaiRpXcDan_GEKBifCJdzYOwT5gON3Vc", title: "Smoked Gouda Mac", subtitle: "ELEVATED CLASSICS" },
 ];
-
 const menuItems = [...BASE_ITEMS, ...BASE_ITEMS];
 
 export default function MenuSection() {
