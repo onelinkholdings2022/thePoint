@@ -9,8 +9,8 @@ const AUTOPLAY_DELAY = 4000;
 
 const BASE_ITEMS = [
   { src: "https://lh3.googleusercontent.com/d/1M1VjX9BJlAD9xeX8WucUjvNec4jHFnps", title: "Something Good", subtitle: "CBD & ZERO-PROOF" },
-  { src: "https://lh3.googleusercontent.com/d/1HvKeyD75tds4uRozMqP0P7fHHk7SvSnm", title: "The Point Burger", subtitle: "SHERRIED BACON JAM" },
-  { src: "https://lh3.googleusercontent.com/d/1-jzbvWUn5JvHhu_WUGjFJ11D18-fxTH2", title: "Smoked Gouda Mac", subtitle: "ELEVATED CLASSICS" },
+  { src: "https://lh3.googleusercontent.com/d/1Zw0XkO32IaCtFY12h54U-AODhebiE3Sp", title: "The Point Burger", subtitle: "SHERRIED BACON JAM" },
+  { src: "https://lh3.googleusercontent.com/d/1D5dCzXU-B8y8o2VOOP5wP1PC6Jblgqcs", title: "Smoked Gouda Mac", subtitle: "ELEVATED CLASSICS" },
 ];
 
 const menuItems = [...BASE_ITEMS, ...BASE_ITEMS];
